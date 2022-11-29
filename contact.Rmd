@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
   message = FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2
 )
 ```
+
 ```{r, echo = FALSE}
 #loading libraries
 
@@ -39,6 +40,7 @@ library(raster)
 library(dplyr)
 library(mapview)
 library(readr)
+library(prettydoc)
 ```
 
 # **TITLE**
