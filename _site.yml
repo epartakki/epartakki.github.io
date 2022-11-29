@@ -14,15 +14,15 @@ output:
     self_contained: no
 # All fa icons were obtained from https://fontawesome.com/icons?d=gallery
 navbar:
-  title: "Eleni Partakki - Portfolio"
+  title: "Eleni Partakki"
   left:
     - text: "About"
       href: index.html
     - text: "Interests"
-      href: b2b.html
+      href: interests.html
     - text: "Research"
-      href: b2bdnb.html
+      href: research.html
     - text: "Contact Me"
-      href: sample.html
+      href: contact.html
 #  right:
 #    - icon: fa-slack fa-lg
