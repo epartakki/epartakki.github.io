@@ -1,1 +1,0 @@
-# epartakki.github.io
