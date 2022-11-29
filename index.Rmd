@@ -1,0 +1,89 @@
+---
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: kable
+---
+<p>&nbsp;</p>
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Set R chunk default options:
+# -do not output all R messages in html report
+# -do not output all R warnings in html report
+# -set default figure widths and heights for all code blocks, unless you 
+#  override them
+knitr::opts_chunk$set(
+  message = FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2
+)
+```
+
+
+
+# **Current Goals**
+<p>&nbsp;</p>
+
+
+
+```{r, echo = FALSE}
+#loading libraries
+
+library(ggplot2)
+library(lubridate)
+library(tidyr)
+library(readr)
+library(mapview)
+library(tidyverse)
+library(sf)
+library(htmltools)
+library(geojsonio)
+library(leaflet)
+library(USAboundaries)
+library(maps)
+library(editData)
+library(sp)
+library(tmaptools)
+library(raster)
+library(dplyr)
+library(mapview)
+library(readr)
+```
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+
+
+# Sales Engineering
+
+
+
+
+
+
+
+
+
+

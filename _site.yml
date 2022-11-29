@@ -1,0 +1,28 @@
+name: "my-website"
+output_dir: docs
+# The website theme "cosmo" was chosen from
+# https://bootswatch.com/3/
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    toc_depth: 2
+    theme: flatly
+    highlight: tango
+    df_print: paged
+    lib_dir: site_libs
+    self_contained: no
+# All fa icons were obtained from https://fontawesome.com/icons?d=gallery
+navbar:
+  title: "Eleni Partakki - Portfolio"
+  left:
+    - text: "About"
+      href: index.html
+    - text: "Interests"
+      href: b2b.html
+    - text: "Research"
+      href: b2bdnb.html
+    - text: "Contact Me"
+      href: sample.html
+#  right:
+#    - icon: fa-slack fa-lg
