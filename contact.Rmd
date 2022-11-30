@@ -42,13 +42,14 @@ library(mapview)
 library(readr)
 library(prettydoc)
 ```
+<p>&nbsp;</p>
 
-# **TITLE**
+# Get in touch
 
-XYZ
+If you found anything interesting on this website and would like to reach out, please do! I am always happy to chat. 
 
-## **SUBTITLE**
+[LinkedIn](https://www.linkedin.com/in/elenipartakki/)
 
-XYZ
+
 
 

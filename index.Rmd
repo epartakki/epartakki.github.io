@@ -1,4 +1,5 @@
 ---
+title: "Eleni Partakki"
 output:
   html_document:
     toc: true
@@ -18,12 +19,6 @@ knitr::opts_chunk$set(
   message = FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2
 )
 ```
-
-
-
-# **Current Goals**
-<p>&nbsp;</p>
-
 
 
 ```{r, echo = FALSE}
@@ -50,6 +45,10 @@ library(mapview)
 library(readr)
 ```
 
+# **About Me**
+<p>&nbsp;</p>
+
+A graduate from Smith College with a BA in Computer Science and Government. With extensive transferable and interpersonal skills combined with enthusiasm for technology, data science, and development, I use my skills to help institutions grow and advance while working with various tools and software.
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -59,10 +58,15 @@ library(readr)
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
+## Interests
+
+## Leadership
+
+## Extracurricullar
+
+## Learning
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -73,8 +77,9 @@ library(readr)
 <p>&nbsp;</p>
 
 
+# Software Engineering
 
-
+# Data Science
 
 # Sales Engineering
 
