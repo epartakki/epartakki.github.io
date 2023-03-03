@@ -47,7 +47,6 @@ library(readr)
 
 # **About Me**
 <p>&nbsp;</p>
-
 Hey there stranger! I am a young engineer with a passion for using technology to solve real-world problems.
 
 I grew up fascinated by the power of machines and how they can be used to make our lives easier. This led me to pursue a degree in engineering, where I gained a deep understanding of the principles that govern the design and operation of mechanical, electrical, and software systems.
