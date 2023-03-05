@@ -1,12 +1,11 @@
 name: "my-website"
 output_dir: docs
-# The website theme was chosen from https://bootswatch.com/3/
 output:
   html_document:
     toc: yes
     toc_float: yes
     toc_depth: 2
-    theme: united
+    theme: journal
     highlight: tango
     df_print: paged
     lib_dir: site_libs

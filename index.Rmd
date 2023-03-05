@@ -23,7 +23,6 @@ knitr::opts_chunk$set(
 
 ```{r, echo = FALSE}
 #loading libraries
-
 library(ggplot2)
 library(lubridate)
 library(tidyr)
@@ -118,12 +117,3 @@ books:
 </p>
 
 &nbsp;
-
-
-
-
-
-
-
-
-
