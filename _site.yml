@@ -12,6 +12,8 @@ output:
     self_contained: no
   #  includes:
   #    in_header: header.html
+  #add into html: <link rel="shortcut icon" href="{path to favicon file}" />
+
     
     
 # All fa icons were obtained from https://fontawesome.com/icons?d=gallery
