@@ -71,14 +71,28 @@ Comparative Politics
 
 Post-colonial development
 
-
+Open-Source
 
 Games - Factorio, Animal Crossing, Super Mario
 
-books:
+Books:
 
+## Deep-Dives
+
+### Developing Software
+While there are many ways of developing software, the Agile Manifesto is a definite favorite.
+
+The idea is that while there is value in the items on the right, the authors (and as a fan, myself) value the items on the left more.
+
+[Agile Manifesto](https://agilemanifesto.org/history.html)
+*Individuals and interactions* over processes and tools
+*Working software* over comprehensive documentation
+*Customer collaboration* over contract negotiation
+*Responding to change* over following a plan
 
 ## Leadership
+
+### Managing and Planning
 
 ## Extracurricullar
 
