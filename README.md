@@ -1,1 +1,1 @@
-# Personal portfolio: pending
+# Personal portfolio: under construction
