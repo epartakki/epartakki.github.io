@@ -44,6 +44,11 @@ library(mapview)
 library(readr)
 ```
 
+
+<!-- ```{r img-with-knitr, echo=FALSE, fig.align='center', out.width='50%'} -->
+<!-- knitr::include_graphics("eleni.jpeg", alt = "Avatar") -->
+<!-- ``` -->
+
 # **About Me**
 <p>&nbsp;</p>
 Hey there stranger! I am a young engineer and theorist with a passion for using technology and human-centered design to solve real-world problems. 

@@ -47,6 +47,16 @@ library(readr)
 
 You can find some of my projects on my [GitHub](https://github.com/epartakki/)
 
+
+
+## Talks
+
+## Electronics
+
+## Competitions
+
+### Hackathons
+
 &nbsp;
 <hr />
 <p style="text-align: center;">Portfolio by <a href="https://github.com/epartakki/">Eleni Partakki</a></p>
