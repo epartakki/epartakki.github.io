@@ -45,9 +45,9 @@ library(readr)
 ```
 
 
-<!-- ```{r img-with-knitr, echo=FALSE, fig.align='center', out.width='50%'} -->
-<!-- knitr::include_graphics("eleni.jpeg", alt = "Avatar") -->
-<!-- ``` -->
+```{r img-with-knitr, echo=FALSE, fig.align='center', out.width='50%'}
+knitr::include_graphics("eleni.jpeg")
+```
 
 # **About Me**
 <p>&nbsp;</p>
