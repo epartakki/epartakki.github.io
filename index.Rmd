@@ -190,11 +190,13 @@ Pencil in hand, pencil on paper. A beauty of all sorts. Wireframes and various p
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <!-- Add font awesome icons -->
 <p style="text-align: center;">
     <a href="https://twitter.com/epartakki" class="fa fa-twitter"></a>
     <a href="https://www.linkedin.com/in/elenipartakki/" class="fa fa-linkedin"></a>
     <a href="https://github.com/epartakki" class="fa fa-github"></a>
+    <a href="https://medium.com/@elenipartakki" class="fa fa-medium"></a>
 </p>
 
 &nbsp;
