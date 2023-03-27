@@ -49,7 +49,7 @@ library(readr)
 knitr::include_graphics("eleni.jpeg")
 ```
 
-<p style="text-align: center;">To read my articles, check out my<a href="https://medium.com/@elenipartakki">blog</a></p>
+<p style="text-align: center;">To read my articles, check out my <a href="https://medium.com/@elenipartakki">blog</a></p>
 
 # **About Me**
 Hey there stranger! I am a young engineer, political theorist and aspiring scientist with a passion for using technology and human-centered design to solve real-world problems. 
