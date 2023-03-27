@@ -71,17 +71,17 @@ I grew up on the island of Cyprus, in Nicosia, the last divided capital in the w
 
 Widely known as the "tractor" of the neighborhood for breaking things and being very active (perhaps too active for some people in a patriarchal society as a girl playing sports and getting dirt everywhere), I was always supported by my family to be curious and resourceful.
 
-At around the age of 6, I was fortunate to be passed down a computer, and my world changed. I began watching YouTube videos, learning how the internet worked, and began discovering the world of science. Simultaneously, I was very active in my community, including politics. Growing up next to so many soldiers seemed bizarre after realizing through my internet searches that maybe the rest of the world does not live like that. I began advocating for a peaceful resolution in Cyprus, and before I knew it, I was involved with the European Union and United Nations representing the youth.
+At around the age of 6, I was fortunate to be passed down a computer, and my world changed. I began watching YouTube videos, learning how the internet worked, and began discovering the world of science. Simultaneously, I was very active in my community, including politics. Growing up next to so many soldiers seemed bizarre, particularly after realizing through my internet searches that maybe the rest of the world did not live like that. I began advocating for a peaceful resolution in Cyprus, and before I knew it, I was involved with the European Union and United Nations representing the youth.
 
-Things began getting worse financially, and both my parents had faced health issues after years of trauma from experiencing war and poverty when they were kids. To help them out, I began working after school at a little tavern called "Palm Tree" (Finija in Cypriot), and then when I'd ride my bike back home at around midnight, I would sit and study for the next day. The positive side from this time period was that I used to have to cook for my sister and I, so I make some delicious dishes. Happy to share some recipes but HEY, keep them safe. You never know when I'll start "Eleni's Dishes", the restaurant of everything and anything... 
+Things began getting worse financially, and both my parents had faced health issues after years of trauma from experiencing war and poverty when they were kids. To help them out, I began working after school at a little tavern called "Palm Tree" (Finija in Cypriot), and then when I'd ride my bike back home at around midnight, I would sit and study for the next day. The positive side from this time period was that I used to have to cook for my sister and I, and as a result, I consider myself a decent cook and baker. Happy to share some recipes but HEY, keep them safe. You never know when I'll start "Eleni's Dishes", the restaurant of everything and anything... 
 
-I was determined to make a better life for myself and my loved ones, so I worked relentlessly and became the first person in my family to go to college, receiving a full scholarship at Smith College to study Computer Science and Political Science. I joke that I was the first in my family to start saving money, and have a credit card, and as sad as it may be at times, it is what it is. 
+I was determined to make a better life for myself and my loved ones, so I worked relentlessly and became the first person in my family to go to college, receiving a full scholarship at Smith College to study Computer Science and Political Science. This was one of the largest blessings of my life. I joke that I was the first in my family to start saving money, and have a credit card, and talk about money, and as sad as it may be at times, it is what it is. 
 
-I've always been curious about the world and wanted to make a positive impact. Of course this is a lighthearted highlight of my early years on earth, but I hope my story inspires others to pursue your dreams, no matter where you come from or how much money you have. Determination and hard work are irreplaceable my friend.
+I've always been curious about the world and wanted to make a positive impact. Of course this is a lighthearted highlight of my early years on earth, but I hope my story inspires you to pursue your dreams, no matter where you come from or how much money you have. Determination and hard work are irreplaceable my friend.
  
  
 # **What is on my mind today?**
-Currently, I am an independent researcher with one of my passions being artificial intelligence alignment. After completing a degree in computer science and political science, I became fascinated with the potential of AI to revolutionize society and improve human lives. However, I also recognized the significant risks posed by powerful AI systems that could act against human interests. I am choosing to devote my free-time (free as in time I am not working to pay my bills) on research to the development of AI alignment techniques and strategies. I am conducting different independent research on topics such as value alignment, reward engineering, and cooperative AI, with a focus on ensuring that AI systems are aligned with human values and goals. As both a political science and computer science aspiring scientist, figuring out how to connect humanity and AI is of outmost importance to me, and have decided that not offering my time to aid the improvement of society, would be a life unfulfilling to me and the people I love and care about.
+Currently, I am an independent researcher with one of my passions being artificial intelligence alignment. I have become fascinated with the potential of AI to revolutionize society and improve human lives. However, I also recognize the significant risks posed by powerful AI systems that could act against human interests. I am choosing to devote my free-time (free as in time I am not working to pay my bills) on research to the development of AI alignment techniques and strategies. I am conducting different independent research on topics such as value alignment, reward engineering, and cooperative AI, with a focus on ensuring that AI systems are aligned with human values and goals. As both a political science and computer science aspiring scientist, figuring out how to connect humanity and AI is of outmost importance to me, and have decided that not offering my time to aid the improvement of society, would be a life unfulfilling to me and the people I love and care about.
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -89,97 +89,6 @@ Currently, I am an independent researcher with one of my passions being artifici
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-
-## Interests
-Comparative Politics
-
-Post-colonial development
-
-Open-Source
-
-Games - Factorio, Animal Crossing, Super Mario
-
-Books:
-
-## Deep-Dives
-
-### Developing Software
-While there are many ways of developing software, the Agile Manifesto is a definite favorite.
-
-The idea is that while there is value in the items on the right, the authors (and as a fan, myself) value the items on the left more.
-
-[Agile Manifesto](https://agilemanifesto.org/history.html)
-*Individuals and interactions* over processes and tools
-*Working software* over comprehensive documentation
-*Customer collaboration* over contract negotiation
-*Responding to change* over following a plan
-
-## Leadership
-
-### Managing and Planning
-
-Retrospective: review the recent past to make a plan for your near future.
-
-Building good teams requires harnessing our most human of skills. Thinking deeply.
-
-Good thing. Bad thing. Better thing.
-* What successes did you have? What went well? 
-* What was frustrating? What went poorly?
-* What could we do in response?
-
-
-### Why I love MVP so much
-
-I think. Constantly. Non stop. I observe people, motions and emoitons around me all the time. I have many ideas, some of them significantly better than the other, and other so bad that I self-ridicule myself. Now, if I was to take all these ideas and implement them to the best of my ability, it would be such a waste of time. Some thoughts are just passing, but sometimes the itch to try something new stays a little longer. The beauty of aiming for a minimum viable product is that I can test something, fail (sometimes more, sometimes less), and decide whether this is even something I am interested enough to continue pursuing.
-
-MVP also further supports a growth mindset instead of a stagnant obsession with perfection which we may never see. Because we always want to improve and better. It is in human nature to try to evolve. Alright alright alright we can philosophically discuss this further and I can create a counter-argument for myself, but for the sake of sharing how much I love minimum viable products, let this be.
-
-
-## Extracurricullar
-
-## Learning
-
-## Software Engineering
-
-Why is software engineering challenging?
-Human communication is messy and planning for the uncertain is never precise.
-
-It is also hard to think far enough for an implementation to be effective. I find that it is much easier to think in the extreme near, or the extreme far future. But what is we were better at distilling the product/tool essence of what we are trying to accomplish?
-
-Returning to the previous idea of thinking deeply, what if we were to ask:
-
-* Who is it for?
-* What does it do?
-* Why should they use it?
-
-Perhaps this is where we tap into PM territory, but I genuinely believe that being a great engineer means being a PM of your life such that you can always accomplish tasks under the three pillars of: Business Goals, Tech Needs and User Desires.
-
-I will explain this: presume you want to create an application that helps you split the bill between you and your friends. This could be rent, electricity; some type of repetitive monthly expense. 
-
-Business Goal: efficiently request money while keeping a backlog
-Tech Needs: needs to be accessible by everyone involved and should accurately split the bills, hence a hope for 100//2 == 50 instead of some arbitrary, or perhaps even sneaky incorrect solution.
-User Desires: you want it to be pretty. You want it to not be glitchy.
-
-Now, this leads to my next favorite thing:
-
-### Hand Sketches.
-
-Pencil in hand, pencil on paper. A beauty of all sorts. Wireframes and various prototypes are cool, but nothing beats the creativity of letting your hand muscles dance to the signals of your brain. I'll share some of my art later that was an aftermath of hand on paper.
-
-
-## Data Science
-
-## Sales Engineering
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
 
 
 &nbsp;
