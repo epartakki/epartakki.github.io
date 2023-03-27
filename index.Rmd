@@ -1,5 +1,5 @@
 ---
-title: "Hello world, I am ℓn(ℯ). Well, Eleni."
+title: "I am ℓn(ℯ). Well, Eleni."
 output:
   html_document:
     toc: true
