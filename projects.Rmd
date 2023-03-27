@@ -43,9 +43,19 @@ library(readr)
 
 <p>&nbsp;</p>
 
-# Under Construction
+## Projects
 
-You can find some of my projects on my [GitHub](https://github.com/epartakki/)
+Hackathon
+
+ValetBike
+
+UNFICYP
+
+CFP
+
+PeacePlayers
+
+Euroscola
 
 
 ## Interests
@@ -60,6 +70,11 @@ Games - Factorio, Animal Crossing, Super Mario
 Books:
 
 ## Deep-Dives
+
+### Sports
+
+IWC
+
 
 ### Developing Software
 While there are many ways of developing software, the Agile Manifesto is a definite favorite.
@@ -127,16 +142,14 @@ Pencil in hand, pencil on paper. A beauty of all sorts. Wireframes and various p
 
 ## Data Science
 
+VAST Challenges
+
+
 ## Sales Engineering
 
 
-## Talks
-
 ## Electronics
 
-## Competitions
-
-## Hackathons
 
 &nbsp;
 <hr />

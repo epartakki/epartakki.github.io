@@ -46,7 +46,7 @@ library(prettydoc)
 
 ## Get in touch
 
-If you found anything interesting on this website and would like to reach out, please do! I am always happy to chat. 
+If you found anything interesting on this website and would like to reach out, please do! I am always happy to chat.
 
 <!-- Add font awesome icons -->
 <p style="text-align: center;">
