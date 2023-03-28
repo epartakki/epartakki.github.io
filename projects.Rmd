@@ -78,14 +78,15 @@ Retrospective: review the recent past to make a plan for your near future.
 Building good teams requires harnessing our most human of skills. Thinking deeply.
 
 Good thing. Bad thing. Better thing.
+
 * What successes did you have? What went well? 
 * What was frustrating? What went poorly?
 * What could we do in response?
 
 
-### Why I love MVP so much
+### Why I love MVP (minimum viable products) so much
 
-I think. Constantly. Non stop. I observe people, motions and emoitons around me all the time. I have many ideas, some of them significantly better than the other, and other so bad that I self-ridicule myself. Now, if I was to take all these ideas and implement them to the best of my ability, it would be such a waste of time. Some thoughts are just passing, but sometimes the itch to try something new stays a little longer. The beauty of aiming for a minimum viable product is that I can test something, fail (sometimes more, sometimes less), and decide whether this is even something I am interested enough to continue pursuing.
+I think. Constantly. Non stop. I observe people, motions and emotions around me all the time. I have many ideas, some of them better than others, and some so bad that I self-ridicule myself. Now, if I was to take all these ideas and implement them to the best of my ability, it would be such a waste of time. Some thoughts are just passing, but sometimes the itch to try something new stays a little longer. The beauty of aiming for a minimum viable product is that I can test something, fail (sometimes more, sometimes less), and decide whether this is even something I am interested enough to continue pursuing.
 
 MVP also further supports a growth mindset instead of a stagnant obsession with perfection which we may never see. Because we always want to improve and better. It is in human nature to try to evolve. Alright alright alright we can philosophically discuss this further and I can create a counter-argument for myself, but for the sake of sharing how much I love minimum viable products, let this be.
 
