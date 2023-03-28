@@ -2,6 +2,7 @@
 title: "I am ℓn(ℯ). Well, Eleni."
 output:
   html_document:
+    favicon: "images/favicon.ico"
     toc: true
     toc_depth: 2
     toc_float: true
@@ -46,7 +47,7 @@ library(readr)
 
 
 ```{r, echo=FALSE, out.width='45%', fig.align='center'}
-knitr::include_graphics("eleni.jpeg")
+knitr::include_graphics("images/eleni.jpeg")
 ```
 
 <p style="text-align: center;">To read my articles, check out my <a href="https://medium.com/@elenipartakki">blog</a></p>
@@ -67,7 +68,7 @@ I hope this website serves as an opportunity for you to explore a little more ab
 <p>&nbsp;</p>
 
 <p align="center">
-  <img src="dalle.png" alt="Dalle" width="50%"/>
+  <img src="images/dalle.png" alt="Dalle" width="50%"/>
 </p>
 <center>DALL·E prompt: Creative brain dump that inspired the creation of a new blog for the future of humanity</center>
 
@@ -91,7 +92,7 @@ I've always been curious about the world and wanted to make a positive impact. O
 Currently, I am an independent researcher with one of my passions being artificial intelligence alignment. I have become fascinated with the potential of AI to revolutionize society and improve human lives. However, I also recognize the significant risks posed by powerful AI systems that could act against human interests. I am choosing to devote my free-time (free as in time I am not working to pay my bills) on research to the development of AI alignment techniques and strategies. I am conducting different independent research on topics such as value alignment, reward engineering, and cooperative AI, with a focus on ensuring that AI systems are aligned with human values and goals. As both a political science and computer science aspiring scientist, figuring out how to connect humanity and AI is of outmost importance to me, and have decided that not offering my time to aid the improvement of society, would be a life unfulfilling to me and the people I love and care about.
 
 <p align="center">
-  <img src="plant.jpg"/>
+  <img src="images/plant.jpg"/>
 </p>
 
 &nbsp;
