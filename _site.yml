@@ -23,7 +23,7 @@ navbar:
   left:
     - text: "About"
       href: index.html
-    - text: "Projects and Interests"
+    - text: "Work and Interests"
       href: projects.html
     - text: "Research"
       href: research.html
