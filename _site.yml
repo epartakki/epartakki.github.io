@@ -2,7 +2,7 @@ name: "my-website"
 output_dir: docs
 output:
   html_document:
-    favicon: "images/ep.png"
+    favicon: "images/favicon.ico"
     toc: yes
     toc_float: yes
     toc_depth: 2
