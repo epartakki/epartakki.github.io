@@ -33,7 +33,6 @@ library(sf)
 library(htmltools)
 library(geojsonio)
 library(leaflet)
-library(USAboundaries)
 library(maps)
 library(editData)
 library(sp)
@@ -81,7 +80,7 @@ I was determined to make a better life for myself and my loved ones, so I worked
 I've always been curious about the world and wanted to make a positive impact. Of course, this is a lighthearted highlight of my early years on earth, but I hope my story inspires you to pursue your dreams, no matter where you come from or how much money you have. Determination and hard work are irreplaceable my friend.
  
 # **What is on my mind today?**
-I have become fascinated with the potential of AI to revolutionize society and improve human lives. However, I also recognize the significant risks posed by powerful AI systems that could act against human interests. I am choosing to devote my free-time (free as in time I am not working to pay my bills) on research to the development of AI alignment techniques and strategies. I am conducting different independent research on topics such as value alignment, reward engineering, and cooperative AI, with a focus on ensuring that AI systems are aligned with human values and goals. As both a political science and computer science aspiring scientist, figuring out how to connect humanity and AI is of outmost importance to me, and have decided that not offering my time to aid the improvement of society, would be a life unfulfilling to me and the people I love and care about.
+I have become fascinated with the potential of AI to revolutionize society and improve human lives. However, I also recognize the significant risks posed by powerful AI systems that could act against human interests. I am choosing to devote my free-time on research to the development of AI alignment techniques and strategies. I am conducting different independent research on topics such as value alignment, reward engineering, and cooperative AI, with a focus on ensuring that AI systems are aligned with human values and goals. As both a political science and computer science aspiring scientist, figuring out how to connect humanity and AI is of utmost importance to me, and have decided that not offering my time to aid the improvement of society, would be a life unfulfilled to me and the people I love and care about.
 
 # Under Development
 
