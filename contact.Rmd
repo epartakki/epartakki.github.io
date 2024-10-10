@@ -50,7 +50,6 @@ If you found anything interesting on this website and would like to reach out, p
 
 <!-- Add font awesome icons -->
 <p style="text-align: center;">
-    <a href="https://twitter.com/epartakki" class="fa fa-twitter"></a>
     <a href="https://www.linkedin.com/in/elenipartakki/" class="fa fa-linkedin"></a>
     <a href="https://github.com/epartakki" class="fa fa-github"></a>
     <a href="https://medium.com/@elenipartakki" class="fa fa-medium"></a>
