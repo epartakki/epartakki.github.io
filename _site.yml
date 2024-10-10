@@ -6,8 +6,8 @@ output:
     toc: yes
     toc_float: yes
     toc_depth: 2
-    theme: united
-    highlight: tango
+    theme: flatly
+    highlight: espresso
     df_print: paged
     lib_dir: site_libs
     self_contained: no
