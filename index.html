@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eleni Partakki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crimson:     #9B2335;
+    --crimson-soft:#C4596A;
+    --navy:        #1F3058;
+    --navy-soft:   #2E4472;
+    --brown:       #7A4F3A;
+    --olive:       #5C6B44;
+    --olive-pale:  #8A9B6E;
+    --burnt:       #C86B2A;
+    --burnt-pale:  #E0955A;
+    --parchment:   #FAF6EF;
+    --cream:       #F5EFE3;
+    --warm-white:  #FFFCF7;
+    --ink:         #2A1F1A;
+    --ink-soft:    #5A4A42;
+    --gold:        #C49A35;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--warm-white);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 5vw;
+    background: rgba(255,252,247,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(154, 35, 53, 0.08);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--crimson);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--crimson); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    padding: 13vh 5vw 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* soft blob shapes — Mediterranean light, not geometry */
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blob-1 {
+    width: 500px; height: 500px;
+    background: rgba(155, 35, 53, 0.07);
+    top: -150px; right: -100px;
+  }
+  .blob-2 {
+    width: 400px; height: 400px;
+    background: rgba(31, 48, 88, 0.06);
+    bottom: 20vh; left: -100px;
+  }
+  .blob-3 {
+    width: 300px; height: 300px;
+    background: rgba(200, 107, 42, 0.06);
+    top: 50vh; right: 10vw;
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-hello {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(4rem, 9vw, 8rem);
+    line-height: 0.95;
+    color: var(--ink);
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.4s forwards;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--crimson);
+    display: block;
+  }
+
+  .hero-intro {
+    max-width: 560px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.6s forwards;
+  }
+
+  .hero-intro strong { color: var(--ink); font-weight: 500; }
+
+  .hero-detail {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--olive-pale);
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s forwards;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 4vh; left: 5vw;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0.35;
+    writing-mode: vertical-rl;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-scroll::before {
+    content: '';
+    width: 1px; height: 40px;
+    background: currentColor;
+    display: block;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 100%; overflow: hidden;
+    line-height: 0;
+  }
+  .divider svg { display: block; width: 100%; }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--cream);
+    padding: 8rem 5vw;
+    position: relative;
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .about-left { position: sticky; top: 8rem; }
+
+  .tag-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    background: var(--warm-white);
+    border: 1px solid rgba(90,74,66,0.15);
+    border-radius: 100px;
+    padding: 0.4rem 1rem;
+  }
+
+  .section-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .section-title em { font-style: italic; color: var(--crimson); }
+
+  .about-body p {
+    font-size: 1.05rem;
+    line-height: 1.95;
+    color: var(--ink-soft);
+    margin-bottom: 1.4rem;
+  }
+
+  .about-body p:last-child { margin-bottom: 0; }
+
+  .about-body strong { color: var(--ink); font-weight: 500; }
+
+  .aside-note {
+    margin-top: 2.5rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--warm-white);
+    border-left: 3px solid var(--crimson-soft);
+    border-radius: 0 12px 12px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ── WORK ── */
+  .work {
+    background: var(--warm-white);
+    padding: 8rem 5vw;
+  }
+
+  .work-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .work-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+
+  .work-header-text {}
+  .work-header p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    max-width: 380px;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(90,74,66,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 20px 20px 0 0;
+    background: var(--card-accent, var(--crimson));
+    opacity: 0.6;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(42,31,26,0.07); }
+  .card:hover::before { transform: scaleX(1); }
+
+  .card-1 { --card-accent: var(--crimson); }
+  .card-2 { --card-accent: var(--navy); }
+  .card-3 { --card-accent: var(--olive); }
+  .card-4 { --card-accent: var(--burnt); }
+  .card-5 { --card-accent: var(--brown); }
+  .card-6 { --card-accent: var(--crimson-soft); }
+
+  .card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .card-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+
+  /* ── THINKING ── */
+  .thinking {
+    background: var(--navy);
+    padding: 8rem 5vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .thinking::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(155,35,53,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .thinking-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .thinking .section-eyebrow { color: var(--burnt-pale); }
+  .thinking .section-title { color: var(--parchment); }
+  .thinking .section-title em { color: var(--burnt-pale); }
+
+  .thinking-left { position: sticky; top: 8rem; }
+
+  .thinking-left p {
+    font-size: 1rem;
+    color: rgba(250,246,239,0.5);
+    line-height: 1.8;
+    font-weight: 300;
+    margin-top: 1.5rem;
+  }
+
+  .thought-list { display: flex; flex-direction: column; gap: 0; }
+
+  .thought {
+    padding: 2.2rem 0;
+    border-bottom: 1px solid rgba(250,246,239,0.08);
+    cursor: default;
+  }
+
+  .thought:first-child { padding-top: 0; }
+
+  .thought-q {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .thought-a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: rgba(250,246,239,0.55);
+    line-height: 1.75;
+  }
+
+  /* ── STORY ── */
+  .story {
+    background: var(--cream);
+    padding: 8rem 5vw;
+    position: relative;
+  }
+
+  .story-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .story-header {
+    max-width: 620px;
+    margin-bottom: 5rem;
+  }
+
+  .story-header .section-title { margin-bottom: 1.2rem; }
+
+  .story-header p {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0.6rem; bottom: 0;
+    left: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--crimson-soft), var(--olive-pale), transparent);
+    opacity: 0.4;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 0 0 3.5rem 2.5rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.35rem; top: 0.55rem;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--crimson-soft);
+    border: 2px solid var(--cream);
+  }
+
+  .timeline-place {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--burnt);
+    margin-bottom: 0.4rem;
+    font-weight: 300;
+  }
+
+  .timeline-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+
+  .timeline-body {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.85;
+    max-width: 580px;
+  }
+
+  /* ── HUMAN ── */
+  .human {
+    background: var(--warm-white);
+    padding: 8rem 5vw;
+  }
+
+  .human-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .human-text .section-title em { color: var(--olive); }
+
+  .human-text p {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    line-height: 1.95;
+    margin-top: 1.5rem;
+  }
+
+  .human-text p strong { color: var(--ink); font-weight: 500; }
+
+  .human-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .tile {
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 1.75rem;
+    border: 1px solid rgba(90,74,66,0.07);
+  }
+
+  .tile-emoji { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+  .tile-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+  .tile-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--crimson);
+    padding: 8rem 5vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .contact::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .contact-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+
+  .contact .section-eyebrow { color: rgba(255,252,247,0.5); }
+
+  .contact-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--parchment);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .contact-heading em { font-style: italic; }
+
+  .contact-body {
+    font-size: 1.05rem;
+    color: rgba(250,246,239,0.7);
+    line-height: 1.85;
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+
+  .contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    transition: all 0.25s;
+  }
+
+  .contact-btn-primary {
+    background: var(--parchment);
+    color: var(--crimson);
+  }
+  .contact-btn-primary:hover { background: #fff; transform: translateY(-2px); }
+
+  .contact-btn-secondary {
+    background: transparent;
+    color: var(--parchment);
+    border: 1px solid rgba(250,246,239,0.4);
+  }
+  .contact-btn-secondary:hover { border-color: rgba(250,246,239,0.8); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    padding: 2.5rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: rgba(250,246,239,0.3);
+  }
+
+  .footer-right {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: rgba(250,246,239,0.2);
+  }
+
+  /* ── REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .about-inner, .thinking-inner, .human-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-left, .thinking-left { position: static; }
+    .cards { grid-template-columns: 1fr; }
+    .work-header { flex-direction: column; align-items: flex-start; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    .hero { padding-top: 14vh; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Eleni Partakki</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#contact">Say hello</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-hello">Hello, I'm</p>
+    <h1 class="hero-name">Eleni<em>Partakki</em></h1>
+    <p class="hero-intro">
+      I work on <strong>semantics, data, and enterprise AI</strong> — specifically on the part everyone skips: making sure teams actually mean the same thing when they use the same words. It sounds deceptively simple. It almost never is.
+    </p>
+    <p class="hero-detail">Cypriot by birth, Romanian by roots, Londoner by choice — and very fond of a good meal.</p>
+  </div>
+  <span class="hero-scroll">scroll</span>
+</section>
+
+<!-- smooth wave transition -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#F5EFE3"/>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <p class="section-eyebrow reveal">Who I am</p>
+      <h2 class="section-title reveal">Precise,<br>warm,<br><em>and usually right.</em></h2>
+      <div class="tag-group reveal reveal-delay-1">
+        <span class="tag">🌊 Nicosia, Cyprus</span>
+        <span class="tag">🏰 Transylvanian roots</span>
+        <span class="tag">🇬🇧 London</span>
+        <span class="tag">Solutions Engineering</span>
+        <span class="tag">Tamr EMEA & APAC</span>
+        <span class="tag">CS + Political Science</span>
+      </div>
+    </div>
+
+    <div class="about-body">
+      <p class="reveal">Most AI systems don't fail because the models are bad. They fail because <strong>meaning is inconsistent</strong> — different teams using the same words to mean different things, different words to mean the same thing. That semantic drift compounds quietly until automation becomes unreliable and analytics become political.</p>
+      <p class="reveal reveal-delay-1">I work at the intersection of <strong>ontology, data engineering, and enterprise AI</strong> — designing semantic layers that make business logic explicit, inspectable, and reusable. Ideally without forcing anyone to migrate their databases or learn OWL.</p>
+      <p class="reveal reveal-delay-2">I lead Solutions Engineering for EMEA and APAC at Tamr, which means I spend a lot of time translating between people: ontologists, data engineers, AI engineers, executives, and delivery teams. I'm comfortable in technical depth and equally comfortable in a room where no one agrees on the vocabulary yet.</p>
+      <p class="reveal reveal-delay-3">I genuinely like helping people think through hard problems. I'll stay on a call longer than I should. I'll follow up when I said I would. I care about doing the thing well, not just getting it done.</p>
+      <div class="aside-note reveal">
+        "I grew up in the last divided capital in the world. I learned early that a shared vocabulary isn't a given — it's something you build, carefully, together."
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" style="background: var(--cream);">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,20 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="#FFFCF7"/>
+  </svg>
+</div>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="work-inner">
+    <div class="work-header">
+      <div class="work-header-text">
+        <p class="section-eyebrow reveal">What I do</p>
+        <h2 class="section-title reveal">Areas of<br><em>focus</em></h2>
+      </div>
+      <p class="reveal">Six themes I keep coming back to — whether I'm in a workshop, a technical design session, or writing at midnight because an idea wouldn't wait.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card card-1 reveal">
+        <span class="card-icon">🧩</span>
+        <h3 class="card-title">Semantic Infrastructure</h3>
+        <p class="card-body">Ontology as structural backbone, not academic decoration. Formalising business logic outside of prompts so that AI systems behave consistently — not just most of the time.</p>
+      </div>
+      <div class="card card-2 reveal reveal-delay-1">
+        <span class="card-icon">🏛️</span>
+        <h3 class="card-title">Enterprise AI Governance</h3>
+        <p class="card-body">Deployment models, identity context, access control, execution boundaries. Systems that respect governance constraints without just burying ambiguity one layer deeper.</p>
+      </div>
+      <div class="card card-3 reveal">
+        <span class="card-icon">🔗</span>
+        <h3 class="card-title">Solutions Engineering</h3>
+        <p class="card-body">Leading SE across EMEA and APAC at Tamr — spanning healthcare, life sciences, financial services, manufacturing, and retail. Every sector has its own vocabulary for the same problems.</p>
+      </div>
+      <div class="card card-4 reveal reveal-delay-1">
+        <span class="card-icon">💬</span>
+        <h3 class="card-title">Narrative & Positioning</h3>
+        <p class="card-body">How a system is understood, adopted, and trusted is as important as how it works. I spend as much time on the language around a product as the product itself.</p>
+      </div>
+      <div class="card card-5 reveal">
+        <span class="card-icon">⚙️</span>
+        <h3 class="card-title">Data Platforms</h3>
+        <p class="card-body">Integrating semantic layers with platforms like Databricks without breaking enterprise constraints. Infrastructure-agnostic execution that still holds at scale.</p>
+      </div>
+      <div class="card card-6 reveal reveal-delay-1">
+        <span class="card-icon">🤝</span>
+        <h3 class="card-title">Human–Machine Alignment</h3>
+        <p class="card-body">Research background in human-machine interaction and online moderation — now applied to how AI systems earn and maintain trust from the people who actually have to use them daily.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THINKING -->
+<section class="thinking">
+  <div class="thinking-inner">
+    <div class="thinking-left">
+      <p class="section-eyebrow reveal">What I'm thinking about</p>
+      <h2 class="section-title reveal">Current<br><em>preoccupations</em></h2>
+      <p class="reveal">The questions that don't resolve neatly. The ones I'm still working through.</p>
+    </div>
+
+    <div class="thought-list">
+      <div class="thought reveal">
+        <p class="thought-q">Why do semantic systems succeed when mandated ones fail?</p>
+        <p class="thought-a">It's rarely because someone had the authority to enforce a standard. It's because someone made the system useful enough that teams stopped fighting it. Adoption is a design problem, not a governance problem.</p>
+      </div>
+      <div class="thought reveal reveal-delay-1">
+        <p class="thought-q">Can ontology be a deterministic backbone for AI — not just a knowledge graph?</p>
+        <p class="thought-a">Not something you query when you need a fact, but a structural constraint that makes AI outputs predictable across contexts, teams, and time. That's the architecture I keep returning to.</p>
+      </div>
+      <div class="thought reveal reveal-delay-2">
+        <p class="thought-q">What does shared meaning actually cost an organisation?</p>
+        <p class="thought-a">Months of repeated reinterpretation. Political analytics. AI you can't explain to an auditor. The real cost isn't in the tooling — it's in the friction that nobody measured because it looked like "just how things are."</p>
+      </div>
+      <div class="thought reveal">
+        <p class="thought-q">Where does top-down buy-in help, and where does it kill momentum?</p>
+        <p class="thought-a">There's a tension between the grassroots team that actually uses a semantic layer and the executive who needs to approve it. Getting that sequencing right is an underrated skill in enterprise AI work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-header">
+      <p class="section-eyebrow reveal">Where I came from</p>
+      <h2 class="section-title reveal">A slightly longer<br><em>introduction</em></h2>
+      <p class="reveal">I never quite fit into a single category. I've found that useful.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <p class="timeline-place">Nicosia, Cyprus</p>
+        <h3 class="timeline-heading">Growing up in the last divided capital in the world</h3>
+        <p class="timeline-body">I grew up next to soldiers and UN checkpoints without fully understanding why for the first few years of my life. My father farmed; my mother worked in a grocery store. Money was inconsistent. Stability was earned, not assumed. At six, someone passed down an old computer and that was that — I disappeared into it and didn't really come back.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <p class="timeline-place">Community & Politics</p>
+        <h3 class="timeline-heading">Advocating before I had a title for it</h3>
+        <p class="timeline-body">Before I had any idea what a career was, I was involved with the European Union and United Nations, representing youth voices on the Cyprus conflict. Somewhere between cycling home from late shifts at a tavern called Palm Tree and studying until 2am, I became someone who genuinely believed that the right conversation, at the right time, changes things.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <p class="timeline-place">Smith College, Massachusetts</p>
+        <h3 class="timeline-heading">First in my family to go to university — on a full scholarship</h3>
+        <p class="timeline-body">Computer Science and Political Science. The combination made sense to me before I could articulate why: systems thinking, human behaviour, power structures, and the logic underneath everything. My research focused on human-machine interaction and online moderation. I found the friction between what AI systems do and what people believe they do genuinely fascinating — and I still do.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <p class="timeline-place">Romania (Transylvania) & Cyprus</p>
+        <h3 class="timeline-heading">Two heritages, both involving a lot of good food and historical complexity</h3>
+        <p class="timeline-body">My father's roots are Transylvanian — old forests, castle country, a very specific kind of dry humour. My mother's side is coastal Cypriot — sun, tavernas, warmth that borders on aggressive hospitality. I live somewhere in between. Both taught me to hold complexity without needing to resolve it immediately.</p>
+      </div>
+
+      <div class="timeline-item reveal">
+        <p class="timeline-place">Now — London</p>
+        <h3 class="timeline-heading">Leading Solutions Engineering at Tamr, thinking about semantic infrastructure</h3>
+        <p class="timeline-body">I work across EMEA and APAC, which means unusual hours but also genuinely interesting problems at the intersection of enterprise data, AI, and the humans navigating both. I write occasionally on Medium. I track macros with more discipline than is probably healthy. I have strong opinions about eggs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HUMAN SIDE -->
+<section class="human">
+  <div class="human-inner">
+    <div class="human-text">
+      <p class="section-eyebrow reveal">Outside the work</p>
+      <h2 class="section-title reveal">Also a<br><em>person</em></h2>
+      <p class="reveal">I take care of the people around me. I take care of my body the same way I approach systems — with structure, but without punishing rigidity. I find joy in small things that are done with real attention.</p>
+      <p class="reveal reveal-delay-1">I'm <strong>competitive with myself</strong>, not with others. I want things to be good because I made them good — not because I beat someone else at it. That shows up in how I work, how I cook, and occasionally in how I feel about my LDL levels.</p>
+    </div>
+    <div class="human-tiles">
+      <div class="tile reveal">
+        <span class="tile-emoji">🥚</span>
+        <p class="tile-title">Food, deliberately</p>
+        <p class="tile-body">I care about how a plate looks and what it means. I have opinions about courgettes that I will share unprompted.</p>
+      </div>
+      <div class="tile reveal reveal-delay-1">
+        <span class="tile-emoji">📚</span>
+        <p class="tile-title">Relentlessly curious</p>
+        <p class="tile-body">Human brain, geopolitics, economic systems, new technology. I read widely and connect things sideways.</p>
+      </div>
+      <div class="tile reveal reveal-delay-2">
+        <span class="tile-emoji">🌿</span>
+        <p class="tile-title">Outside, often</p>
+        <p class="tile-body">The outdoors is where I think best. Nature doesn't have an agenda and I find that restful.</p>
+      </div>
+      <div class="tile reveal reveal-delay-3">
+        <span class="tile-emoji">🔧</span>
+        <p class="tile-title">Tinkerer at heart</p>
+        <p class="tile-body">Gadgets, electronics, things that can be taken apart and understood. Curiosity as a lifestyle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <p class="section-eyebrow">Get in touch</p>
+    <h2 class="contact-heading">Let's think<br>through something <em>together.</em></h2>
+    <p class="contact-body">I'm particularly interested in conversations about enterprise AI governance, semantic infrastructure, and the gap between what systems can do and what organisations actually manage to adopt. Also happy to talk about Cyprus, Romanian folklore, or the correct way to make eggs.</p>
+    <div class="contact-links">
+      <a class="contact-btn contact-btn-primary" href="mailto:elenipartakki@gmail.com">Send me a message</a>
+      <a class="contact-btn contact-btn-secondary" href="https://medium.com/@elenipartakki" target="_blank">Read my writing ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-left">Eleni Partakki — ℓn(ℯ). Well, Eleni.</span>
+  <span class="footer-right">Cyprus · Romania · London</span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
